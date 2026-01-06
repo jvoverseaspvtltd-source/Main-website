@@ -45,6 +45,7 @@ const FullEligibilityForm = () => {
             testWaiver: 'No',
         },
         loanRequirement: {
+            isLoanRequired: 'Yes',
             totalCost: '',
             requiredAmount: '',
             selfContribution: '',
@@ -95,9 +96,21 @@ const FullEligibilityForm = () => {
             }
             setError(null); // Clear error if VALID
         }
+        // Logic for skipping steps if loan is not required
+        if (step === 5 && formData.loanRequirement.isLoanRequired === 'No') {
+            setStep(9);
+            return;
+        }
+
         setStep(prev => Math.min(prev + 1, 9));
     };
-    const prevStep = () => setStep(prev => Math.max(prev - 1, 1));
+    const prevStep = () => {
+        if (step === 9 && formData.loanRequirement.isLoanRequired === 'No') {
+            setStep(5);
+            return;
+        }
+        setStep(prev => Math.max(prev - 1, 1));
+    };
 
     const handleNestedChange = (section, field, value, subField) => {
         // Strict Validation for Real-World Scenarios
@@ -391,15 +404,27 @@ const FullEligibilityForm = () => {
                         {step === 5 && (
                             <div className="animate-in slide-in-from-right duration-300">
                                 <h3 className="text-lg font-bold text-[#001F3F] mb-6 border-b pb-2">5️⃣ Loan Requirement Details</h3>
-                                <div className="grid md:grid-cols-2 gap-4">
-                                    {renderInput("Total Course Cost", "loanRequirement", "totalCost", "number", "Tuition + Living")}
-                                    {renderInput("Required Loan Amount", "loanRequirement", "requiredAmount", "number", "Amount in ₹")}
-                                    {renderInput("Self Contribution", "loanRequirement", "selfContribution", "number", "Amount from savings")}
-                                    {renderSelect("Preferred Loan Type", "loanRequirement", "preferredType", ["Unsecured", "Secured"])}
+                                <div className="mb-6">
+                                    {renderSelect("Do you need an Education Loan?", "loanRequirement", "isLoanRequired", ["Yes", "No"])}
                                 </div>
-                                <div className="mt-4 p-4 bg-yellow-50 text-yellow-800 text-xs rounded-lg border border-yellow-100 italic">
-                                    Note: Unsecured loans are faster to process, while Secured loans offer lower interest rates.
-                                </div>
+                                {formData.loanRequirement.isLoanRequired === 'Yes' ? (
+                                    <>
+                                        <div className="grid md:grid-cols-2 gap-4">
+                                            {renderInput("Total Course Cost", "loanRequirement", "totalCost", "number", "Tuition + Living")}
+                                            {renderInput("Required Loan Amount", "loanRequirement", "requiredAmount", "number", "Amount in ₹")}
+                                            {renderInput("Self Contribution", "loanRequirement", "selfContribution", "number", "Amount from savings")}
+                                            {renderSelect("Preferred Loan Type", "loanRequirement", "preferredType", ["Unsecured", "Secured"])}
+                                        </div>
+                                        <div className="mt-4 p-4 bg-yellow-50 text-yellow-800 text-xs rounded-lg border border-yellow-100 italic">
+                                            Note: Unsecured loans are faster to process, while Secured loans offer lower interest rates.
+                                        </div>
+                                    </>
+                                ) : (
+                                    <div className="p-8 text-center bg-blue-50 rounded-xl border border-dashed border-blue-200">
+                                        <p className="text-blue-900 font-medium mb-2">No loan required?</p>
+                                        <p className="text-sm text-blue-700">You can skip the co-applicant and financial details. Click 'Continue' to finish your profile.</p>
+                                    </div>
+                                )}
                             </div>
                         )}
 
@@ -410,7 +435,7 @@ const FullEligibilityForm = () => {
                                 <div className="grid md:grid-cols-2 gap-4">
                                     {renderInput("Full Name", "coApplicant", "fullName", "text", "Parent/Guardian Name")}
                                     {renderInput("Relationship to Student", "coApplicant", "relationship", "text", "e.g. Father, Mother, Brother")}
-                                    {renderSelect("Occupation / Employment Status", "coApplicant", "occupation", ["Salaried", "Business", "Self-Employed"])}
+                                    {renderSelect("Occupation / Employment Status", "coApplicant", "occupation", ["Salaried", "Business", "Self-Employed", "Housewife/Homemaker", "Others"])}
                                     {renderInput("Mobile Number", "coApplicant", "mobileNumber", "tel", "9999999999")}
                                     {renderSelect("PAN & Aadhaar Available?", "coApplicant", "panAadhaarAvailable", ["Yes", "No"])}
                                 </div>

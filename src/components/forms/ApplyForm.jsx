@@ -239,13 +239,15 @@ const ApplyForm = () => {
             </div>
 
             {/* Co-Applicant */}
-            <div className={sectionStyle}>
-                <h4 className={sectionHeaderStyle}>Co-Applicant Details (For Loan)</h4>
-                <div className="grid md:grid-cols-2 gap-6">
-                    <Select label="Relationship with Applicant" id="coApplicantRelation" value={formData.coApplicantRelation} onChange={handleChange} options={["Father", "Mother", "Spouse", "Guardian"]} />
-                    <Select label="Occupation" id="coApplicantOccupation" value={formData.coApplicantOccupation} onChange={handleChange} options={["Salaried", "Business Owner", "Professional", "Retired"]} />
+            {formData.loanRequired === "Yes" && (
+                <div className={sectionStyle}>
+                    <h4 className={sectionHeaderStyle}>Co-Applicant Details (For Loan)</h4>
+                    <div className="grid md:grid-cols-2 gap-6">
+                        <Select label="Relationship with Applicant" id="coApplicantRelation" value={formData.coApplicantRelation} onChange={handleChange} options={["Father", "Mother", "Spouse", "Guardian"]} />
+                        <Select label="Occupation" id="coApplicantOccupation" value={formData.coApplicantOccupation} onChange={handleChange} options={["Salaried", "Business Owner", "Professional", "Housewife/Homemaker", "Retired/Others"]} />
+                    </div>
                 </div>
-            </div>
+            )}
 
             {/* Follow Up */}
             <div className={sectionStyle}>
