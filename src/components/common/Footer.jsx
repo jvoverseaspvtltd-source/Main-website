@@ -114,10 +114,10 @@ const Footer = () => {
                             </ul>
                         </div>
                         <div className="flex gap-4 pt-4">
-                            <Link href="/login" className="text-xs font-bold uppercase tracking-wider px-4 py-2 border border-slate-800 rounded-lg hover:bg-slate-900 transition-all">
+                            <Link href="/student-login" className="text-xs font-bold uppercase tracking-wider px-4 py-2 border border-slate-800 rounded-lg hover:bg-slate-900 transition-all">
                                 Student Login
                             </Link>
-                            <Link href="/login" className="text-xs font-bold uppercase tracking-wider px-4 py-2 border border-slate-800 rounded-lg hover:bg-slate-900 transition-all">
+                            <Link href="/employee-login" className="text-xs font-bold uppercase tracking-wider px-4 py-2 border border-slate-800 rounded-lg hover:bg-slate-900 transition-all">
                                 Employee Login
                             </Link>
                         </div>
