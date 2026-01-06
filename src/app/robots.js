@@ -12,6 +12,6 @@ export default function robots() {
                 '/static/',
             ],
         },
-        sitemap: 'https://jvoverseas.com/sitemap.xml',
+        sitemap: 'https://www.jvoverseas.com/sitemap.xml',
     }
 }

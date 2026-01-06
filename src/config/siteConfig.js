@@ -14,7 +14,7 @@ const getApiBaseUrl = () => {
 const siteConfig = {
     name: "JV Overseas",
     description: "Your trusted partner for overseas education and immigration.",
-    url: "https://jvoverseas.com",
+    url: process.env.NEXT_PUBLIC_SITE_URL || "https://www.jvoverseas.com",
     apiBaseUrl: getApiBaseUrl(),
     lmsUrl: process.env.NEXT_PUBLIC_LMS_URL || "#",
     crmUrl: process.env.NEXT_PUBLIC_CRM_URL || "#",

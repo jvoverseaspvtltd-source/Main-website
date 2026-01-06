@@ -1,5 +1,5 @@
 export default function sitemap() {
-    const baseUrl = 'https://jvoverseas.com';
+    const baseUrl = 'https://www.jvoverseas.com';
     const lastModified = new Date();
 
     const routes = [

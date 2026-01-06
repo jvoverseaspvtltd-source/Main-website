@@ -24,6 +24,7 @@ export const metadata = {
     icon: "/icon.webp",
     apple: "/icon.webp",
   },
+  robots: "index, follow",
 };
 
 import ChatWidget from "../components/ChatWidget";
