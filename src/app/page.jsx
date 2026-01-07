@@ -7,11 +7,16 @@ import FAQSection from "../components/home/FAQSection";
 import CTASection from "../components/home/CTASection";
 
 export const metadata = {
-  title: "JV Overseas - Home",
-  description: "Your gateway to global opportunities. Study abroad, immigration, and visa services.",
-  icons: {
-    icon: "/icon.webp",
-    apple: "/icon.webp",
+  title: "JV Overseas - Home | Empowering Your International Education Dreams",
+  description: "Expert study abroad consultancy. We help students with university admissions, visa processing, and education loans for USA, UK, Canada, Australia, and more.",
+  alternates: {
+    canonical: "https://www.jvoverseas.com",
+  },
+  openGraph: {
+    title: "JV Overseas - Home | Study Abroad & Education Loans",
+    description: "Your gateway to global opportunities. Professional guidance for your international education journey.",
+    url: "https://www.jvoverseas.com",
+    images: ["/icon.webp"],
   },
 };
 
