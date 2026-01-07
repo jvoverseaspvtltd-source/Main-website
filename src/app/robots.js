@@ -8,8 +8,6 @@ export default function robots() {
                 '/crm',
                 '/lms',
                 '/api/',
-                '/_next/',
-                '/static/',
             ],
         },
         sitemap: 'https://www.jvoverseas.com/sitemap.xml',
