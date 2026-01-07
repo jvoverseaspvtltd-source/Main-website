@@ -37,9 +37,6 @@ export const metadata = {
     icon: "/icon.webp",
     apple: "/icon.webp",
   },
-  alternates: {
-    canonical: "/",
-  },
   openGraph: {
     title: "JV Overseas Pvt Ltd | Premier Overseas Education & Loan Consultancy",
     description: "Your trusted partner for global education. Expert guidance for admissions and education loans across USA, UK, Canada, Australia and more.",
