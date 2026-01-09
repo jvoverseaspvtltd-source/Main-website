@@ -6,7 +6,6 @@ const nextConfig = {
   compress: true, // Enable gzip compression
 
   // Rendering
-  output: 'standalone', // Required for Render deployment
   trailingSlash: false, // Keep URLs clean (e.g. /about instead of /about/)
 
   // Redirects: Canonical domain handling (non-www to www)
