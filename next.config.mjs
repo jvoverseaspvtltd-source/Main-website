@@ -7,13 +7,8 @@ const nextConfig = {
 
   // Rendering
   output: 'standalone', // Required for Render deployment
-  traitlingSlash: false, // Keep URLs clean (e.g. /about instead of /about/)
+  trailingSlash: false, // Keep URLs clean (e.g. /about instead of /about/)
 
-  // Build Configuration
-  eslint: {
-    ignoreDuringBuilds: true, // Prevent build failure on lint warnings
-  },
-  
   // Redirects: Canonical domain handling (non-www to www)
   async redirects() {
     return [
