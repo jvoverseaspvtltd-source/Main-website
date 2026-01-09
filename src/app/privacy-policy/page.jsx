@@ -3,9 +3,7 @@ import React from 'react';
 export const metadata = {
     title: "Privacy Policy | JV Overseas",
     description: "Learn how JV Overseas collects, uses, and protects your personal information.",
-    alternates: {
-        canonical: "https://www.jvoverseas.com/privacy-policy",
-    },
+
 };
 
 const PrivacyPolicy = () => {

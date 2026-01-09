@@ -3,9 +3,7 @@ import React from 'react';
 export const metadata = {
     title: "Terms of Service | JV Overseas",
     description: "Terms and conditions for using the JV Overseas website and services.",
-    alternates: {
-        canonical: "https://www.jvoverseas.com/terms",
-    },
+
 };
 
 const TermsOfService = () => {

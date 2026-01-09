@@ -1,5 +1,13 @@
 import Link from "next/link";
 
+export const metadata = {
+    title: "Page Not Found | JV Overseas",
+    robots: {
+        index: false,
+        follow: false,
+    },
+};
+
 export default function NotFound() {
     return (
         <div className="flex flex-col items-center justify-center min-h-[60vh] text-center px-4">

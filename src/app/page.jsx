@@ -7,13 +7,12 @@ import FAQSection from "../components/home/FAQSection";
 import CTASection from "../components/home/CTASection";
 
 export const metadata = {
-  title: "JV Overseas - Home | Empowering Your International Education Dreams",
-  description: "Expert study abroad consultancy. We help students with university admissions, visa processing, and education loans for USA, UK, Canada, Australia, and more.",
-  alternates: {
-    canonical: "https://www.jvoverseas.com",
+  title: {
+    absolute: "JV Overseas | Study Abroad Consultants & Education Loan Experts",
   },
+  description: "Expert study abroad consultancy. We help students with university admissions, visa processing, and education loans for USA, UK, Canada, Australia, and more.",
   openGraph: {
-    title: "JV Overseas - Home | Study Abroad & Education Loans",
+    title: "JV Overseas | Study Abroad Consultants & Education Loan Experts",
     description: "Your gateway to global opportunities. Professional guidance for your international education journey.",
     url: "https://www.jvoverseas.com",
     images: ["/icon.webp"],

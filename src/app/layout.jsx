@@ -23,6 +23,9 @@ export const metadata = {
     default: "JV Overseas Pvt Ltd | Premier Overseas Education & Loan Consultancy",
     template: "%s | JV Overseas"
   },
+  alternates: {
+    canonical: './',
+  },
   description: "Your trusted partner for global education. Expert guidance for admissions and education loans across USA, UK, Canada, Australia and more.",
   keywords: ["study abroad", "overseas education", "education loan", "visa assistance", "university admission", "JV Overseas"],
   authors: [{ name: "JV Overseas team" }],
