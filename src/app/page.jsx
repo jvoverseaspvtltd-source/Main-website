@@ -1,3 +1,7 @@
+
+// FORCE STATIC GENERATION
+export const dynamic = "force-static";
+
 import HeroSection from "../components/home/HeroSection";
 import ServicesSection from "../components/home/ServicesSection";
 import CountriesSection from "../components/home/CountriesSection";
@@ -7,10 +11,11 @@ import FAQSection from "../components/home/FAQSection";
 import CTASection from "../components/home/CTASection";
 
 export const metadata = {
-  title: {
-    absolute: "JV Overseas | Study Abroad Consultants & Education Loan Experts",
-  },
+  title: "JV Overseas | Study Abroad Consultants & Education Loan Experts",
   description: "Expert study abroad consultancy. We help students with university admissions, visa processing, and education loans for USA, UK, Canada, Australia, and more.",
+  alternates: {
+    canonical: 'https://www.jvoverseas.com',
+  },
   openGraph: {
     title: "JV Overseas | Study Abroad Consultants & Education Loan Experts",
     description: "Your gateway to global opportunities. Professional guidance for your international education journey.",
@@ -23,7 +28,6 @@ export default function Home() {
   return (
     <>
       <HeroSection />
-
       <ServicesSection />
       <CountriesSection />
       <UniversitiesNetwork />

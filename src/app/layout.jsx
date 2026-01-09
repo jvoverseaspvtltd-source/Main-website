@@ -4,63 +4,36 @@ import Header from "../components/common/Header";
 import Footer from "../components/common/Footer";
 import EligibilityButton from "../components/common/EligibilityButton";
 import FloatingButtons from "../components/home/FloatingButtons";
+import WhatsAppButton from "../components/common/WhatsAppButton";
+import ChatWidget from "../components/ChatWidget";
+
+// FORCE STATIC RENDERING for the entire layout subtree
+export const dynamic = "force-static";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
   subsets: ["latin"],
+  display: 'swap',
 });
 
 const geistMono = Geist_Mono({
   variable: "--font-geist-mono",
   subsets: ["latin"],
+  display: 'swap',
 });
 
-import WhatsAppButton from "../components/common/WhatsAppButton";
-
+// SEO METADATA
 export const metadata = {
   metadataBase: new URL("https://www.jvoverseas.com"),
   title: {
     default: "JV Overseas Pvt Ltd | Premier Overseas Education & Loan Consultancy",
     template: "%s | JV Overseas"
   },
-  alternates: {
-    canonical: './',
-  },
   description: "Your trusted partner for global education. Expert guidance for admissions and education loans across USA, UK, Canada, Australia and more.",
   keywords: ["study abroad", "overseas education", "education loan", "visa assistance", "university admission", "JV Overseas"],
-  authors: [{ name: "JV Overseas team" }],
+  authors: [{ name: "JV Overseas Team" }],
   creator: "JV Overseas",
   publisher: "JV Overseas Pvt Ltd",
-  formatDetection: {
-    email: false,
-    address: false,
-    telephone: false,
-  },
-  icons: {
-    icon: "/icon.webp",
-    apple: "/icon.webp",
-  },
-  openGraph: {
-    title: "JV Overseas Pvt Ltd | Premier Overseas Education & Loan Consultancy",
-    description: "Your trusted partner for global education. Expert guidance for admissions and education loans across USA, UK, Canada, Australia and more.",
-    url: "https://www.jvoverseas.com",
-    siteName: "JV Overseas",
-    images: [
-      {
-        url: "/icon.webp",
-        width: 800,
-        height: 600,
-      },
-    ],
-    locale: "en_US",
-    type: "website",
-  },
-  twitter: {
-    card: "summary_large_image",
-    title: "JV Overseas Pvt Ltd | Premier Overseas Education & Loan Consultancy",
-    description: "Expert guidance for admissions and education loans across USA, UK, Canada, Australia and more.",
-    images: ["/icon.webp"],
-  },
   robots: {
     index: true,
     follow: true,
@@ -72,38 +45,66 @@ export const metadata = {
       "max-snippet": -1,
     },
   },
+  alternates: {
+    canonical: './', // Resolves to absolute URL via metadataBase
+  },
+  icons: {
+    icon: "/icon.webp",
+    apple: "/icon.webp",
+  },
+  openGraph: {
+    title: "JV Overseas Pvt Ltd | Premier Overseas Education & Loan Consultancy",
+    description: "Your trusted partner for global education. Expert guidance for admissions and education loans across USA, UK, Canada, Australia and more.",
+    url: "https://www.jvoverseas.com",
+    siteName: "JV Overseas",
+    locale: "en_US",
+    type: "website",
+    images: [
+      {
+        url: "/icon.webp",
+        width: 800,
+        height: 600,
+        alt: "JV Overseas Logo",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "JV Overseas Pvt Ltd",
+    description: "Premier Overseas Education & Loan Consultancy",
+    images: ["/icon.webp"],
+  },
   verification: {
-    google: "provide-your-google-verification-code-here", // User can replace this later
+    // google: "verification_code", // Add if available
   },
 };
 
-import ChatWidget from "../components/ChatWidget";
-
 export default function RootLayout({ children }) {
+  // JSON-LD Structured Data
+  const jsonLd = {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "name": "JV Overseas Pvt Ltd",
+    "url": "https://www.jvoverseas.com",
+    "logo": "https://www.jvoverseas.com/icon.webp",
+    "contactPoint": {
+      "@type": "ContactPoint",
+      "telephone": "+91-9876543210", // Update with actual number if possible
+      "contactType": "customer service"
+    },
+    "sameAs": [
+      "https://www.facebook.com/jvoverseas",
+      "https://www.instagram.com/jvoverseas",
+      "https://www.linkedin.com/company/jvoverseas"
+    ]
+  };
+
   return (
     <html lang="en" suppressHydrationWarning>
       <head>
         <script
           type="application/ld+json"
-          dangerouslySetInnerHTML={{
-            __html: JSON.stringify({
-              "@context": "https://schema.org",
-              "@type": "Organization",
-              "name": "JV Overseas Pvt Ltd",
-              "url": "https://www.jvoverseas.com",
-              "logo": "https://www.jvoverseas.com/icon.webp",
-              "contactPoint": {
-                "@type": "ContactPoint",
-                "telephone": "+91-XXXXXXXXXX", // Should be replaced with actual number
-                "contactType": "customer service"
-              },
-              "sameAs": [
-                "https://www.facebook.com/jvoverseas",
-                "https://www.instagram.com/jvoverseas",
-                "https://www.linkedin.com/company/jvoverseas"
-              ]
-            })
-          }}
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
         />
       </head>
       <body
