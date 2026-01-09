@@ -9,7 +9,7 @@ export const metadata = {
     openGraph: {
         title: "Contact JV Overseas | Global Education Experts",
         description: "Expert guidance is just a call away. Get in touch for personalized study abroad counseling.",
-        url: "https://jvoverseas.com/contact",
+        url: "https://www.jvoverseas.com/contact",
         images: ["/og-contact.webp"],
     },
 };

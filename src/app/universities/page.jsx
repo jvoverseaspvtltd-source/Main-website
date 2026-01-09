@@ -9,7 +9,7 @@ export const metadata = {
     openGraph: {
         title: "Global Universities Directory | JV Overseas",
         description: "Your gateway to top-tier international education. Find the best universities in USA, UK, Canada, and Australia.",
-        url: "https://jvoverseas.com/universities",
+        url: "https://www.jvoverseas.com/universities",
         images: ["/og-universities.webp"],
     },
 };

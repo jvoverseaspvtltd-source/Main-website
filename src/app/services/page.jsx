@@ -9,7 +9,7 @@ export const metadata = {
     openGraph: {
         title: "Expert Study Abroad Services | JV Overseas",
         description: "Professional guidance for your global education journey. Admission, Visa, and Loan assistance for top destinations.",
-        url: "https://jvoverseas.com/services",
+        url: "https://www.jvoverseas.com/services",
         images: ["/og-services.webp"],
     },
 };
