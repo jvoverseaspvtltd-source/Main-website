@@ -10,7 +10,7 @@ export function middleware(request) {
     const isProductionDomain = host === 'jvoverseas.com' || host === 'www.jvoverseas.com';
 
     if (isProductionDomain) {
-        if (host === 'jvoverseas.com' || protocol === 'http') {
+        if (host === 'jvoverseas.com') {
             const newUrl = new URL(`https://www.jvoverseas.com${pathname}${search}`);
             return NextResponse.redirect(newUrl, 301);
         }
