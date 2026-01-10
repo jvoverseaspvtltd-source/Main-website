@@ -46,7 +46,7 @@ export const metadata = {
     },
   },
   alternates: {
-    canonical: './', // Resolves to absolute URL via metadataBase
+    canonical: 'https://www.jvoverseas.com',
   },
   icons: {
     icon: "/icon.webp",

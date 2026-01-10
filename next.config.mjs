@@ -1,6 +1,7 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   // Optimization and Performance
+  output: 'standalone',
   reactStrictMode: true,
   poweredByHeader: false, // Security: Hide Next.js header
   compress: true, // Enable gzip compression
