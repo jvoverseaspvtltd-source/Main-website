@@ -3,6 +3,9 @@ import ApplyForm from "../../components/forms/ApplyForm";
 export const metadata = {
     title: "Enquiry Form - JV Overseas",
     description: "Get in touch with us for expert guidance on your study abroad journey.",
+    alternates: {
+        canonical: '/enquiry',
+    },
 };
 
 export default function EnquiryPage() {

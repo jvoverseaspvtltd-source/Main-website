@@ -9,6 +9,9 @@ export const metadata = {
         url: "https://www.jvoverseas.com/courses",
         images: ["/og-courses.webp"],
     },
+    alternates: {
+        canonical: '/courses',
+    },
 };
 
 export default function CoursesPage() {

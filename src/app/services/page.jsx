@@ -10,6 +10,9 @@ export const metadata = {
         url: "https://www.jvoverseas.com/services",
         images: ["/og-services.webp"],
     },
+    alternates: {
+        canonical: '/services',
+    },
 };
 
 export default function ServicesPage() {

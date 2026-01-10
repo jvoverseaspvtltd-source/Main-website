@@ -10,6 +10,9 @@ export const metadata = {
         url: "https://www.jvoverseas.com/loan",
         images: ["/og-loan.webp"],
     },
+    alternates: {
+        canonical: '/loan',
+    },
 };
 
 export default function LoanPage() {

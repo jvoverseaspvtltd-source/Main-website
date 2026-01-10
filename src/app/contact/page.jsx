@@ -10,6 +10,9 @@ export const metadata = {
         url: "https://www.jvoverseas.com/contact",
         images: ["/og-contact.webp"],
     },
+    alternates: {
+        canonical: '/contact',
+    },
 };
 
 export default function ContactPage() {

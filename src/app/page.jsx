@@ -14,7 +14,7 @@ export const metadata = {
   title: "JV Overseas | Study Abroad Consultants & Education Loan Experts",
   description: "Expert study abroad consultancy. We help students with university admissions, visa processing, and education loans for USA, UK, Canada, Australia, and more.",
   alternates: {
-    canonical: 'https://www.jvoverseas.com',
+    canonical: '/',
   },
   openGraph: {
     title: "JV Overseas | Study Abroad Consultants & Education Loan Experts",

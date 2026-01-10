@@ -9,6 +9,9 @@ export const metadata = {
         url: "https://www.jvoverseas.com/faq",
         images: ["/og-faq.webp"],
     },
+    alternates: {
+        canonical: '/faq',
+    },
 };
 
 export default function FAQPage() {

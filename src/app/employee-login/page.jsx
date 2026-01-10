@@ -6,6 +6,9 @@ import siteConfig from '../../config/siteConfig';
 export const metadata = {
     title: "Employee Login | JV Overseas",
     description: "Log in to the JV Overseas Employee/CRM Portal.",
+    alternates: {
+        canonical: '/employee-login',
+    },
 };
 
 const EmployeeLoginPage = () => {

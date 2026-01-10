@@ -5,6 +5,9 @@ import { User, ShieldCheck } from 'lucide-react';
 export const metadata = {
     title: "Login | JV Overseas",
     description: "Select your portal to log in to JV Overseas.",
+    alternates: {
+        canonical: '/login',
+    },
 };
 
 const LoginPage = () => {

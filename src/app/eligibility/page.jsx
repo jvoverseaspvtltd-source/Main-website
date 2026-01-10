@@ -3,6 +3,9 @@ import FullEligibilityForm from "../../components/forms/FullEligibilityForm";
 export const metadata = {
     title: "Education Loan Eligibility - JV Overseas",
     description: "Accurately evaluate your education loan eligibility with our comprehensive profile analysis.",
+    alternates: {
+        canonical: '/eligibility',
+    },
 };
 
 export default function EligibilityPage() {

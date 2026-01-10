@@ -10,6 +10,9 @@ export const metadata = {
         url: "https://www.jvoverseas.com/universities",
         images: ["/og-universities.webp"],
     },
+    alternates: {
+        canonical: '/universities',
+    },
 };
 
 export default function UniversitiesPage() {

@@ -5,6 +5,9 @@ import { User, ArrowLeft } from 'lucide-react';
 export const metadata = {
     title: "Student Login | JV Overseas",
     description: "Log in to the JV Overseas Student Portal.",
+    alternates: {
+        canonical: '/student-login',
+    },
 };
 
 const StudentLoginPage = () => {

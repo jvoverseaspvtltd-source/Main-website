@@ -3,6 +3,9 @@ import ApplyForm from "../../components/forms/ApplyForm";
 export const metadata = {
     title: "Apply Now - JV Overseas",
     description: "Start your application process today.",
+    alternates: {
+        canonical: '/apply',
+    },
 };
 
 export default function ApplyPage() {

@@ -45,9 +45,7 @@ export const metadata = {
       "max-snippet": -1,
     },
   },
-  alternates: {
-    canonical: 'https://www.jvoverseas.com',
-  },
+
   icons: {
     icon: "/icon.webp",
     apple: "/icon.webp",
